@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { Calendar, Clock, MapPin, CheckCircle } from 'lucide-react';
 import LeadForm from '../components/LeadForm';

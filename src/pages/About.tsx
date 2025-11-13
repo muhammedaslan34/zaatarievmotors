@@ -1,7 +1,11 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { Award, Target, Users, Leaf, Heart, TrendingUp } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import showroomImage from 'figma:asset/0e134de7c3b23c6a0d5eadc5eaeffdda903b663b.png';
+
+// Placeholder URL for missing showroom image
+const showroomImage = 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200';
 
 const values = [
   {

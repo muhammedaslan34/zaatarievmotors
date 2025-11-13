@@ -1,13 +1,16 @@
+'use client'
+
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImage from 'figma:asset/47f8e09276e131fa77924c419af7c3dc441745ab.png';
+import logoImage from '../assets/47f8e09276e131fa77924c419af7c3dc441745ab.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [modelsDropdownOpen, setModelsDropdownOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const links = [
     { name: 'Home', path: '/' },
@@ -24,17 +27,17 @@ export default function Navbar() {
     { name: 'BYD Leopard 5', path: '/models/leopard-5' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-[#0EA5FF]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
-            <img 
-              src={logoImage} 
-              alt="ZAATARI EV Motors" 
+          <Link href="/" className="flex items-center group">
+            <img
+              src={logoImage.src}
+              alt="ZAATARI EV Motors"
               className="h-20 md:h-28 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
@@ -49,7 +52,7 @@ export default function Navbar() {
                 onMouseLeave={() => link.hasDropdown && setModelsDropdownOpen(false)}
               >
                 <Link
-                  to={link.path}
+                  href={link.path}
                   className={`relative py-2 flex items-center space-x-1 transition-colors ${
                     isActive(link.path)
                       ? 'text-[#00E5FF]'
@@ -77,7 +80,7 @@ export default function Navbar() {
                     {modelLinks.map((model) => (
                       <Link
                         key={model.path}
-                        to={model.path}
+                        href={model.path}
                         className="block px-4 py-3 text-[#E6F6FF] hover:bg-[#0EA5FF]/20 hover:text-[#00E5FF] transition-colors"
                       >
                         {model.name}
@@ -92,7 +95,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              to="/book-test-drive"
+              href="/book-test-drive"
               className="px-6 py-3 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
             >
               Book Test Drive
@@ -122,7 +125,7 @@ export default function Navbar() {
               {links.map((link) => (
                 <div key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     onClick={() => !link.hasDropdown && setIsOpen(false)}
                     className={`block py-2 px-4 rounded-lg transition-colors ${
                       isActive(link.path)
@@ -137,7 +140,7 @@ export default function Navbar() {
                       {modelLinks.map((model) => (
                         <Link
                           key={model.path}
-                          to={model.path}
+                          href={model.path}
                           onClick={() => setIsOpen(false)}
                           className="block py-2 px-4 text-sm text-[#BFC6CC] hover:text-[#00E5FF] transition-colors"
                         >
@@ -149,7 +152,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link
-                to="/book-test-drive"
+                href="/book-test-drive"
                 onClick={() => setIsOpen(false)}
                 className="block py-3 px-4 bg-[#007bff] text-white rounded-lg text-center"
               >

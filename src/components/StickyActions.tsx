@@ -1,3 +1,5 @@
+'use client'
+
 import { Phone, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 

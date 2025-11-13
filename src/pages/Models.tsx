@@ -1,21 +1,25 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { Battery, Gauge, Zap, Users, Package, Shield, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import heroImage from 'figma:asset/72d73685664cfc4ac0d1894b8e566540fe2877a0.png';
-import sideViewImage from 'figma:asset/b506dee5f2bac52edfb4cb1df4df9b8f1984176b.png';
-import frontLightImage from 'figma:asset/d9cfdd1b1a687e1ab47d7e454271414440f7dddb.png';
-import sideDoorImage from 'figma:asset/bef95c7597d14cdb2266e1a024281cc4cd01adc0.png';
-import wheelImage from 'figma:asset/548addf4e07fa1e5dbd813d02a6b0e69c5932e2a.png';
-import frontViewHeadlights from 'figma:asset/4ab1ceef0ec1d77e5d98467f21f1ef8d374e6fee.png';
-import frontViewBulge from 'figma:asset/193bd4c092ccd3032a18e5ddf0b3ee9b48bda523.png';
-import interiorTexture from 'figma:asset/ea94f5f816286715ba8ac1e83a1291468d96bfbc.png';
-import spaceCube from 'figma:asset/555f1ccede5b362e4d567d34d5ddedd48ca2280e.png';
-import largeSpaceLayout from 'figma:asset/f30d2ef63f3560bde2865999788122e55c1c2aa9.png';
-import rearTankImage from 'figma:asset/730f68ff208d927556e35e77ed125a2c70b95bf3.png';
-import spaciousSpaceImage from 'figma:asset/eb77c611becb43193fd2877b3870ba6462497a02.png';
-import convenientStorageImage from 'figma:asset/8e320d4cd22b812172f409719b39be1b4e7ef437.png';
-import fiveSenseCockpit from 'figma:asset/8dc79e32dad2191c228acffc7cfadf5ae39532cc.png';
+import frontViewBulge from '../assets/193bd4c092ccd3032a18e5ddf0b3ee9b48bda523.png';
+import interiorTexture from '../assets/ea94f5f816286715ba8ac1e83a1291468d96bfbc.png';
+import spaceCube from '../assets/555f1ccede5b362e4d567d34d5ddedd48ca2280e.png';
+import largeSpaceLayout from '../assets/f30d2ef63f3560bde2865999788122e55c1c2aa9.png';
+import rearTankImage from '../assets/730f68ff208d927556e35e77ed125a2c70b95bf3.png';
+import spaciousSpaceImage from '../assets/eb77c611becb43193fd2877b3870ba6462497a02.png';
+import convenientStorageImage from '../assets/8e320d4cd22b812172f409719b39be1b4e7ef437.png';
+import fiveSenseCockpit from '../assets/8dc79e32dad2191c228acffc7cfadf5ae39532cc.png';
+
+// Placeholder URLs for missing images
+const heroImage = 'https://images.unsplash.com/photo-1617654112368-307921291f42?w=1200';
+const sideViewImage = 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800';
+const frontLightImage = 'https://images.unsplash.com/photo-1616455579100-2ceaa4eb2d37?w=800';
+const sideDoorImage = 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800';
+const wheelImage = 'https://images.unsplash.com/photo-1558981408-db0ecd8a1ee4?w=600';
+const frontViewHeadlights = 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800';
 
 const specs = [
   { icon: Battery, label: 'Range', value: '550 km' },
@@ -179,7 +183,7 @@ export default function Models() {
               className="md:col-span-2 relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 group aspect-square md:aspect-[2/1]"
             >
               <ImageWithFallback
-                src={frontViewBulge}
+                src={frontViewBulge.src}
                 alt="iconic bulge"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -264,7 +268,7 @@ export default function Models() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
             <ImageWithFallback
-              src={fiveSenseCockpit}
+              src={fiveSenseCockpit.src}
               alt="Five-sense cockpit comfort features"
               className="w-full h-auto"
             />
@@ -287,7 +291,7 @@ export default function Models() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
             <ImageWithFallback
-              src={interiorTexture}
+              src={interiorTexture.src}
               alt="Interior Textures and Details"
               className="w-full h-auto"
             />
@@ -310,7 +314,7 @@ export default function Models() {
           </div>
           <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
             <ImageWithFallback
-              src={spaceCube}
+              src={spaceCube.src}
               alt="Space Cube Interior Dimensions"
               className="w-full h-auto"
             />
@@ -343,7 +347,7 @@ export default function Models() {
               className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 group h-full min-h-[600px] bg-[#0A0A0A]"
             >
               <ImageWithFallback
-                src={rearTankImage}
+                src={rearTankImage.src}
                 alt="1,000-liter rear tank"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
@@ -364,7 +368,7 @@ export default function Models() {
                 className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 group flex-1 bg-[#0A0A0A]"
               >
                 <ImageWithFallback
-                  src={spaciousSpaceImage}
+                  src={spaciousSpaceImage.src}
                   alt="Spacious space"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
@@ -383,7 +387,7 @@ export default function Models() {
                 className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 group flex-1 bg-[#0A0A0A]"
               >
                 <ImageWithFallback
-                  src={convenientStorageImage}
+                  src={convenientStorageImage.src}
                   alt="Convenient storage"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
@@ -450,7 +454,7 @@ export default function Models() {
                 <h3 className="text-2xl text-[#E6F6FF] mb-4">{variant.name}</h3>
                 <div className="text-4xl text-[#00E5FF] mb-8">{variant.price}</div>
                 <Link
-                  to="/book-test-drive"
+                  href="/book-test-drive"
                   className="flex items-center justify-center space-x-2 w-full py-3 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
                 >
                   <span>Get Quote</span>
@@ -475,14 +479,14 @@ export default function Models() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/book-test-drive"
+              href="/book-test-drive"
               className="group inline-flex items-center space-x-2 px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
             >
               <span>Book Test Drive</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/compare"
+              href="/compare"
               className="px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
             >
               Compare Models

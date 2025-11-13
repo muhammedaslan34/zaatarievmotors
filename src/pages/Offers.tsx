@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { Tag, Gift, Percent, Calendar, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import OfferCountdown from '../components/OfferCountdown';
@@ -143,7 +145,7 @@ export default function Offers() {
                   </div>
 
                   <Link
-                    to="/book-test-drive"
+                    href="/book-test-drive"
                     className="group/btn inline-flex items-center justify-center space-x-2 w-full py-3 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
                   >
                     <span>Claim Offer</span>
@@ -192,13 +194,13 @@ export default function Offers() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/book-test-drive"
+              href="/book-test-drive"
               className="inline-block px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300"
             >
               Book Test Drive
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-block px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
             >
               Contact Us

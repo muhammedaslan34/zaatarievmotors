@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { Button } from './ui/button';
@@ -10,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from './ui/select';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface LeadFormProps {
   formType?: 'test-drive' | 'quote' | 'contact';

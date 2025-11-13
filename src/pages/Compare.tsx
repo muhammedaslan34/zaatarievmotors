@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Check, X, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
@@ -137,7 +139,7 @@ export default function Compare() {
                     <h3 className="text-2xl text-[#E6F6FF] mb-2">{models[modelIndex].name}</h3>
                     <p className="text-xl text-[#00E5FF] mb-4">{models[modelIndex].price}</p>
                     <Link
-                      to="/book-test-drive"
+                      href="/book-test-drive"
                       className="inline-flex items-center space-x-2 px-6 py-3 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
                     >
                       <span>Test Drive</span>
@@ -218,13 +220,13 @@ export default function Compare() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/book-test-drive"
+              href="/book-test-drive"
               className="inline-block px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300"
             >
               Book Test Drive
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-block px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
             >
               Contact Sales

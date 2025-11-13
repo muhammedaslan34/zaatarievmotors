@@ -1,5 +1,7 @@
+'use client'
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight, ArrowRight, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -127,7 +129,7 @@ export default function Hero() {
                   className="flex flex-wrap gap-4"
                 >
                   <Link
-                    to="/book-test-drive"
+                    href="/book-test-drive"
                     className="group px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300 flex items-center space-x-2"
                   >
                     <span>{slides[currentSlide].cta}</span>
@@ -135,7 +137,7 @@ export default function Hero() {
                   </Link>
 
                   <Link
-                    to="/models"
+                    href="/models"
                     className="px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
                   >
                     Get Offer

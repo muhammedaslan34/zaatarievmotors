@@ -1,5 +1,7 @@
+'use client'
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Timer, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -102,14 +104,14 @@ export default function OfferCountdown() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/offers"
+                href="/offers"
                 className="group inline-flex items-center justify-center space-x-2 px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300"
               >
                 <span>View All Offers</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/book-test-drive"
+                href="/book-test-drive"
                 className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
               >
                 <span>Book Test Drive</span>

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { FileText, Shield, AlertCircle } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';

@@ -1,8 +1,10 @@
+'use client'
+
 import Hero from '../components/Hero';
 import FeaturedModels from '../components/FeaturedModels';
 import ValuePillars from '../components/ValuePillars';
 import OfferCountdown from '../components/OfferCountdown';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Award, Users, MapPin, Headphones } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
@@ -87,7 +89,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link
-                to="/models"
+                href="/models"
                 className="inline-block px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300"
               >
                 Explore Technology
@@ -137,18 +139,18 @@ export default function Home() {
               Ready to Drive the Future?
             </h2>
             <p className="text-lg text-[#BFC6CC] mb-8 max-w-2xl mx-auto">
-              Visit our showroom in Dubai Meydan or book a test drive to experience 
+              Visit our showroom in Dubai Meydan or book a test drive to experience
               the revolution in electric mobility.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/book-test-drive"
+                href="/book-test-drive"
                 className="inline-block px-8 py-4 bg-[#007bff] text-white rounded-lg hover:shadow-xl hover:shadow-[#007bff]/50 transition-all duration-300"
               >
                 Book Test Drive
               </Link>
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-block px-8 py-4 bg-[#16181C] border border-[#0EA5FF] text-[#E6F6FF] rounded-lg hover:bg-[#0EA5FF]/10 transition-all duration-300"
               >
                 Contact Us

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import logoImage from 'figma:asset/47f8e09276e131fa77924c419af7c3dc441745ab.png';
+import logoImage from '../assets/47f8e09276e131fa77924c419af7c3dc441745ab.png';
 
 export default function Footer() {
   return (
@@ -10,9 +10,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img 
-                src={logoImage} 
-                alt="ZAATARI EV Motors" 
+              <img
+                src={logoImage.src}
+                alt="ZAATARI EV Motors"
                 className="h-20 w-auto mb-3"
               />
             </div>
@@ -39,12 +39,12 @@ export default function Footer() {
           <div>
             <h3 className="text-[#E6F6FF] mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/models" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">All Models</Link></li>
-              <li><Link to="/offers" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Current Offers</Link></li>
-              <li><Link to="/compare" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Compare Models</Link></li>
-              <li><Link to="/book-test-drive" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Book Test Drive</Link></li>
-              <li><Link to="/gallery" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Gallery</Link></li>
-              <li><Link to="/faq" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">FAQ</Link></li>
+              <li><Link href="/models" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">All Models</Link></li>
+              <li><Link href="/offers" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Current Offers</Link></li>
+              <li><Link href="/compare" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Compare Models</Link></li>
+              <li><Link href="/book-test-drive" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Book Test Drive</Link></li>
+              <li><Link href="/gallery" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Gallery</Link></li>
+              <li><Link href="/faq" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">FAQ</Link></li>
             </ul>
           </div>
 
@@ -52,11 +52,11 @@ export default function Footer() {
           <div>
             <h3 className="text-[#E6F6FF] mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">About Us</Link></li>
-              <li><Link to="/contact" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Contact</Link></li>
-              <li><Link to="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Terms & Conditions</Link></li>
-              <li><Link to="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link to="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Warranty</Link></li>
+              <li><Link href="/about" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/contact" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Contact</Link></li>
+              <li><Link href="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Terms & Conditions</Link></li>
+              <li><Link href="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link href="/legal" className="text-[#BFC6CC] hover:text-[#00E5FF] transition-colors text-sm">Warranty</Link></li>
             </ul>
           </div>
 
