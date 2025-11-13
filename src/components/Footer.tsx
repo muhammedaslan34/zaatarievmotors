@@ -1,6 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import logoImage from '../assets/47f8e09276e131fa77924c419af7c3dc441745ab.png';
+import logoImage from '../assets/logo.png';
 
 export default function Footer() {
   return (

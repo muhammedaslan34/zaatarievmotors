@@ -1,15 +1,16 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImage from '../assets/47f8e09276e131fa77924c419af7c3dc441745ab.png';
+import logoImage from '../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [modelsDropdownOpen, setModelsDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   const links = [
@@ -23,11 +24,35 @@ export default function Navbar() {
   ];
 
   const modelLinks = [
-    { name: 'BYD Leopard 7', path: '/models' },
-    { name: 'BYD Leopard 5', path: '/models/leopard-5' },
+    { name: 'BYD Leopard 7', path: '/models/leopard-7' },
   ];
 
   const isActive = (path: string) => pathname === path;
+
+  // Clear timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleDropdownEnter = () => {
+    // Clear any pending close timeout
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setModelsDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    // Set timeout to close after 500ms
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setModelsDropdownOpen(false);
+    }, 500);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-lg border-b border-[#0EA5FF]/20">
@@ -45,11 +70,11 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {links.map((link) => (
-              <div 
+              <div
                 key={link.path}
                 className="relative"
-                onMouseEnter={() => link.hasDropdown && setModelsDropdownOpen(true)}
-                onMouseLeave={() => link.hasDropdown && setModelsDropdownOpen(false)}
+                onMouseEnter={() => link.hasDropdown && handleDropdownEnter()}
+                onMouseLeave={() => link.hasDropdown && handleDropdownLeave()}
               >
                 <Link
                   href={link.path}
@@ -75,6 +100,8 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
                     className="absolute top-full left-0 mt-2 w-48 bg-[#16181C] border border-[#0EA5FF]/30 rounded-lg shadow-lg overflow-hidden"
                   >
                     {modelLinks.map((model) => (

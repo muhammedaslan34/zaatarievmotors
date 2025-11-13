@@ -1,0 +1,68 @@
+
+> Futuristic EV Motors Website@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use by process 49028, using available port 3002 instead.
+   ▲ Next.js 15.5.6
+   - Local:        http://localhost:3002
+   - Network:      http://26.183.231.153:3002
+
+ ✓ Starting...
+ ✓ Ready in 1932ms
+ ○ Compiling /models/leopard-7 ...
+ ✓ Compiled /models/leopard-7 in 1509ms (1410 modules)
+Image with src "/_next/static/media/BYD-leopard-titanuim-7.1ef66209.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/tendy-and-stylish.366de034.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Large-tough-and-stylish.d6e8ee46.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Titanium-headlights.336b2164.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/iconic-bulge.b2c76780.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Titanium-taillights.71e840fa.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Ark-Armor.2e094996.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Ark-Porthole.1d40a7d4.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Five-sense-cockpit-embraces-immersive-comfort.e931c048.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Textured-and-fashionable.b460346e.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Space-Cube.4ece2f5e.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Large-space.378a21f8.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Spacious-space.082df0ae.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/_next/static/media/Convenient.6b827de3.webp" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ GET /models/leopard-7 200 in 2464ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 540ms (1415 modules)
+ GET /sw.js 404 in 893ms
+ GET /sw.js 404 in 51ms
+ GET /sw.js 404 in 62ms
+ ✓ Compiled in 602ms (1412 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /_not-found in 208ms (1417 modules)
+ GET /sw.js 404 in 592ms
+ GET /sw.js 404 in 75ms
+ GET /sw.js 404 in 60ms
+ GET /sw.js 404 in 68ms
+ GET /sw.js 404 in 71ms
+ ✓ Compiled in 426ms (1412 modules)
+ ✓ Compiled in 522ms (1412 modules)
+ ✓ Compiled in 545ms (1412 modules)
+ ✓ Compiled in 348ms (1412 modules)
+ ✓ Compiled in 250ms (1412 modules)
+ ✓ Compiled in 395ms (1412 modules)
+ ✓ Compiled in 309ms (1412 modules)
+ ✓ Compiled in 241ms (1412 modules)
+ ✓ Compiled in 290ms (1412 modules)
+ ✓ Compiled in 505ms (1412 modules)
+ ✓ Compiled in 265ms (1412 modules)
