@@ -63,7 +63,7 @@ export default function Navbar() {
             <img
               src={logoImage.src}
               alt="ZAATARI EV Motors"
-              className="h-20 md:h-28 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-12 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 

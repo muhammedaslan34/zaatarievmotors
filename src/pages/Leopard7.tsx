@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Battery, Gauge, Zap, Users, Package, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { Battery, Gauge, Zap, Users, Package, Shield, ArrowRight, Sparkles, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 import interiorTexture from '../assets/Textured-and-fashionable.webp';
 import spaceCube from '../assets/Space-Cube.webp';
@@ -18,6 +18,9 @@ import sideDoorImage from '../assets/Ark-Porthole.webp';
 import wheelImage from '../assets/Ark-Armor.webp';
 import Titaniumtaillights from '../assets/Titanium-taillights.webp';
 import trendyStylishImage from '../assets/tendy-and-stylish.webp';
+import ecologicalVientianeImage from '../assets/Ecological-Vientiane.webp';
+import highEndTravelImage from '../assets/High-end travel.webp';
+import advancedSecurityImage from '../assets/Advanced-security.webp';
 
 // Placeholder URL for remaining missing image
 const frontViewHeadlights = 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800';
@@ -80,7 +83,10 @@ export default function Models() {
       </div>
 
       {/* Design Philosophy Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Subtle background accent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0EA5FF]/5 via-transparent to-transparent pointer-events-none"></div>
+        <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +134,7 @@ export default function Models() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-[#16181C] rounded-xl p-6 border border-[#0EA5FF]/20 hover:border-[#0EA5FF]/50 transition-all duration-300"
+              className="bg-[#16181C] rounded-xl p-6 border border-[#0EA5FF]/30 hover:border-[#0EA5FF]/60 transition-all duration-300"
             >
               <div className="flex items-center space-x-4 mb-3">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#0EA5FF]/20 to-[#00E5FF]/20 border border-[#0EA5FF]/30 flex items-center justify-center">
@@ -147,8 +153,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-br from-[#00E5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Large, tough and stylish</h3>
             <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
@@ -166,6 +175,7 @@ export default function Models() {
               priority
             />
           </div>
+          </div>
         </motion.div>
 
         {/* H-Shaped Panel Energy Shield - Bento Grid */}
@@ -174,8 +184,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-br from-[#0EA5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Unbreakable Energy Shield</h3>
             <p className="text-lg text-[#BFC6CC] max-w-3xl mx-auto">
@@ -295,6 +308,7 @@ export default function Models() {
               </div>
             </motion.div>
           </div>
+          </div>
         </motion.div>
 
         {/* Five-Sense Cockpit Section */}
@@ -303,8 +317,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tl from-[#00E5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Five-sense cockpit embraces immersive comfort</h3>
             <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
@@ -321,6 +338,7 @@ export default function Models() {
               quality={90}
             />
           </div>
+          </div>
         </motion.div>
 
         {/* Textured and Fashionable Section */}
@@ -329,8 +347,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tr from-[#0EA5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Textured and fashionable</h3>
             <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
@@ -347,6 +368,7 @@ export default function Models() {
               quality={90}
             />
           </div>
+          </div>
         </motion.div>
 
         {/* Space Cube Section */}
@@ -355,8 +377,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-bl from-[#0EA5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Space Cube</h3>
             <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
@@ -373,6 +398,7 @@ export default function Models() {
               quality={90}
             />
           </div>
+          </div>
         </motion.div>
 
         {/* Large Space Section */}
@@ -381,8 +407,11 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-bl from-[#00E5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Large space</h3>
             <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
@@ -477,6 +506,97 @@ export default function Models() {
               Living container, a collection of life experiences
             </p>
           </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Ecological Vientiane Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 relative"
+        >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tl from-[#0EA5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Ecological Vientiane</h3>
+            <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
+              With the car as the core, connecting everything
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 bg-[#0A0A0A]">
+            <Image
+              src={ecologicalVientianeImage}
+              alt="Ecological Vientiane - Connected Ecosystem"
+              width={1600}
+              height={900}
+              className="w-full h-auto"
+              quality={90}
+            />
+          </div>
+          </div>
+        </motion.div>
+
+        {/* High-end Travel Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 relative"
+        >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tr from-[#00E5FF]/3 to-[#0EA5FF]/3 rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">High-end travel</h3>
+            <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
+              Embrace advanced mobility and travel the world with ease
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 bg-[#0A0A0A]">
+            <Image
+              src={highEndTravelImage}
+              alt="High-end travel - Advanced Mobility"
+              width={1600}
+              height={900}
+              className="w-full h-auto"
+              quality={90}
+            />
+          </div>
+          </div>
+        </motion.div>
+
+        {/* Advanced Security Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 relative"
+        >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-bl from-[#0EA5FF]/8 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl md:text-4xl text-[#E6F6FF] mb-4">Advanced security</h3>
+            <p className="text-lg text-[#BFC6CC] max-w-2xl mx-auto">
+              Hard-core shield with advanced technology to protect your safety in all directions
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30 bg-[#0A0A0A]">
+            <Image
+              src={advancedSecurityImage}
+              alt="Advanced security - Safety Technology"
+              width={1600}
+              height={900}
+              className="w-full h-auto"
+              quality={90}
+            />
+          </div>
+          </div>
         </motion.div>
 
         {/* Features Section */}
@@ -485,12 +605,15 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-br from-[#0EA5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <h2 className="text-3xl md:text-4xl text-[#E6F6FF] text-center mb-12">Premium Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {features.map((feature, idx) => (
-              <div key={idx} className="flex items-center space-x-3 bg-[#16181C] rounded-lg p-4 border border-[#0EA5FF]/20">
+              <div key={idx} className="flex items-center space-x-3 bg-[#16181C] rounded-lg p-4 border border-[#0EA5FF]/30">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#0EA5FF] to-[#00E5FF] flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-[#0A0A0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -500,6 +623,7 @@ export default function Models() {
               </div>
             ))}
           </div>
+          </div>
         </motion.div>
 
         {/* Variants Section */}
@@ -508,12 +632,15 @@ export default function Models() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 relative"
         >
+          {/* Subtle background accent */}
+          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tl from-[#00E5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
+          <div className="relative z-10">
           <h2 className="text-3xl md:text-4xl text-[#E6F6FF] text-center mb-12">Available Variants</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {variants.map((variant, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#0EA5FF]/10 to-[#00E5FF]/5 rounded-xl p-8 border border-[#0EA5FF]/30 hover:border-[#0EA5FF]/50 transition-all duration-300">
+              <div key={idx} className="bg-gradient-to-br from-[#0EA5FF]/10 to-[#00E5FF]/5 rounded-xl p-8 border border-[#0EA5FF]/30 hover:border-[#0EA5FF]/60 hover:from-[#0EA5FF]/15 hover:to-[#00E5FF]/8 transition-all duration-300">
                 <h3 className="text-2xl text-[#E6F6FF] mb-4">{variant.name}</h3>
                 <div className="text-4xl text-[#00E5FF] mb-8">{variant.price}</div>
                 <Link
@@ -525,6 +652,109 @@ export default function Models() {
                 </Link>
               </div>
             ))}
+          </div>
+          </div>
+        </motion.div>
+
+        {/* Limited Time Offer CTA */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 rounded-3xl"
+        >
+          {/* Subtle background accent wrapper */}
+          <div className="relative p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-[#0EA5FF]/10 via-[#00E5FF]/5 to-[#0EA5FF]/10 rounded border border-[#00E5FF]/30">
+          <div className="relative overflow-hidden rounded-3xl border-2 border-[#00E5FF] bg-[#1A1A1A] p-12 text-center shadow-2xl shadow-[#00E5FF]/30">
+              {/* Badge */}
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="inline-block mb-6"
+              >
+                <span className="bg-gradient-to-r from-[#0EA5FF] to-[#00E5FF] text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider uppercase shadow-lg">
+                  ⚡ Exclusive Deal
+                </span>
+              </motion.div>
+
+              {/* Heading */}
+              <motion.h2
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-4xl md:text-6xl text-[#E6F6FF] mb-4 font-bold"
+              >
+                LIMITED TIME OFFER!
+              </motion.h2>
+
+              {/* Subheading */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="text-xl text-[#BFC6CC] mb-8"
+              >
+                Secure this car today for just
+              </motion.p>
+
+              {/* Price */}
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, type: "spring" }}
+                className="mb-10 overflow-visible"
+              >
+                <div 
+                  className="font-black text-[#00E5FF] leading-none"
+                  style={{ 
+                    fontSize: 'clamp(4rem, 12vw, 10rem)',
+                    textShadow: '0 0 40px rgba(0, 229, 255, 0.8), 0 0 80px rgba(0, 229, 255, 0.5), 0 0 120px rgba(0, 229, 255, 0.3)'
+                  }}
+                >
+                  $25,500!
+                </div>
+              </motion.div>
+
+              
+
+              {/* WhatsApp CTA Button */}
+              <motion.a
+                href="https://wa.me/971501234567?text=Hi!%20I'm%20interested%20in%20the%20BYD%20Leopard%207%20special%20offer%20for%20$25,500"
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+                className="group inline-flex items-center justify-center gap-3 bg-[#25D366] text-white rounded-xl text-lg font-bold hover:bg-[#1FB855] hover:shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-105"
+                style={{ padding: '0.75rem 1.5rem' }}
+              >
+                <MessageCircle className="w-7 h-7 group-hover:rotate-12 transition-transform" />
+                <span className="tracking-wide">Claim Offer on WhatsApp</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              </motion.a>
+              {/* Expiry Notice */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="text-lg text-[#00E5FF] mb-10 font-semibold"
+              >
+                This special offer expires December 1, 2025
+              </motion.p>
+
+              {/* Additional info */}
+              <p className="text-sm text-[#BFC6CC] mt-6">
+                Limited units available • First come, first served
+              </p>
+          </div>
           </div>
         </motion.div>
 
@@ -556,6 +786,7 @@ export default function Models() {
             </Link>
           </div>
         </motion.div>
+        </div>
       </div>
     </div>
   );

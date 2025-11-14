@@ -8,6 +8,11 @@ import { Toaster } from '@/components/ui/sonner'
 export const metadata: Metadata = {
   title: 'ZAATARI EV Motors - Dubai | Premium Electric Vehicles',
   description: 'Authorized distributor of premium electric vehicles in the GCC region, bringing innovation and sustainability to Dubai.',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
