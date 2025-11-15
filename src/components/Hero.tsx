@@ -100,13 +100,7 @@ export default function Hero() {
                 Explore Models
               </Link>
 
-              <button
-                onClick={handleWhatsApp}
-                className="px-8 py-4 bg-[#25D366] text-white rounded-lg hover:bg-[#128C7E] transition-all duration-300 flex items-center space-x-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp Us</span>
-              </button>
+            
             </motion.div>
           </div>
         </div>

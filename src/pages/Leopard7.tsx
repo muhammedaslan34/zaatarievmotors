@@ -931,88 +931,94 @@ export default function Models() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          {/* Heading - Outside the image */}
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#E6F6FF]">Choose from 4 model versions:</h2>
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl text-[#E6F6FF] font-bold">Choose from 4 model versions:</h2>
           </div>
 
-          {/* Image Section */}
-          <div className="relative min-h-[600px] md:min-h-[700px]">
-            {/* Background Image with Lighter Overlay */}
-            <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 rounded-3xl overflow-hidden">
-              <Image
-                src={pricesImage}
-                alt="Model Versions Background"
-                fill
-                className="object-cover"
-                quality={90}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0A0A0A]/40 to-[#0A0A0A]/70"></div>
-            </div>
+          {/* Image with Pricing Card */}
+          <div className="relative w-full rounded-3xl overflow-hidden">
+            {/* Background Image */}
+            <Image
+              src={pricesImage}
+              alt="BYD Leopard 7 Model Versions"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
+              quality={95}
+              priority
+            />
 
-            {/* Right-aligned Pricing Card (centered vertically) */}
-            <div className="absolute inset-y-0 left-0 right-0 z-10 flex items-center justify-end px-4 md:px-8">
+            {/* Pricing Card - Positioned Right Middle */}
+            <div className="absolute top-1/2 right-8 md:right-16 lg:right-24 -translate-y-1/2 w-[90%] max-w-md md:max-w-lg lg:max-w-xl">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="ml-auto w-full max-w-xl lg:max-w-2xl"
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="backdrop-blur-xl bg-[#0A0A0A]/80 border-2 border-[#0EA5FF]/50 rounded-2xl overflow-hidden shadow-2xl shadow-[#00E5FF]/30"
               >
-                {/* Blurred Card */}
-                <div className="bg-gray-200/70 backdrop-blur-md rounded-lg p-6 md:p-8 shadow-2xl border border-white/20">
-                  <div className="space-y-3 md:space-y-4">
-                    {/* Item 1 - Pro */}
-                    <div className="flex items-center justify-between gap-4 p-3 md:p-4 bg-white/20 rounded-md backdrop-blur-sm">
-                      <div className="flex items-center gap-3 flex-1">
-                        <span className="text-gray-900 font-bold text-lg">1.</span>
-                        <h3 className="text-sm md:text-base lg:text-lg text-gray-900 font-bold">
-                          Pro 135KM two-wheel drive
-                        </h3>
-                      </div>
-                      <div className="text-base md:text-xl lg:text-2xl font-black text-white drop-shadow-lg whitespace-nowrap">
-                        $25,500!
-                      </div>
+                {/* Row 1 - Pro 135KM */}
+                <div className="flex items-center justify-between gap-4 p-4 md:p-5 border-b border-[#0EA5FF]/30 hover:bg-[#0EA5FF]/10 transition-all duration-300">
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#0EA5FF] to-[#00E5FF] text-white text-sm font-bold rounded-full flex-shrink-0">
+                      1
                     </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl text-[#E6F6FF] font-bold">Pro 135KM</h3>
+                      <p className="text-[#BFC6CC] text-sm">two-wheel drive</p>
+                    </div>
+                  </div>
+                  <div className="text-2xl md:text-3xl font-black text-[#00E5FF]">
+                    $25,500
+                  </div>
+                </div>
 
-                    {/* Item 2 - Max 200KM */}
-                    <div className="flex items-center justify-between gap-4 p-3 md:p-4 bg-white/20 rounded-md backdrop-blur-sm">
-                      <div className="flex items-center gap-3 flex-1">
-                        <span className="text-gray-900 font-bold text-lg">2.</span>
-                        <h3 className="text-sm md:text-base lg:text-lg text-gray-900 font-bold">
-                          Max version 200KM two-wheel drive
-                        </h3>
-                      </div>
-                      <div className="text-base md:text-xl lg:text-2xl font-black text-white drop-shadow-lg whitespace-nowrap">
-                        $27,000!
-                      </div>
+                {/* Row 2 - Max 200KM */}
+                <div className="flex items-center justify-between gap-4 p-4 md:p-5 border-b border-[#0EA5FF]/30 hover:bg-[#0EA5FF]/10 transition-all duration-300">
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#0EA5FF] to-[#00E5FF] text-white text-sm font-bold rounded-full flex-shrink-0">
+                      2
                     </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl text-[#E6F6FF] font-bold">Max version 200KM</h3>
+                      <p className="text-[#BFC6CC] text-sm">two-wheel drive</p>
+                    </div>
+                  </div>
+                  <div className="text-2xl md:text-3xl font-black text-[#00E5FF]">
+                    $27,000
+                  </div>
+                </div>
 
-                    {/* Item 3 - Max 190KM */}
-                    <div className="flex items-center justify-between gap-4 p-3 md:p-4 bg-white/20 rounded-md backdrop-blur-sm">
-                      <div className="flex items-center gap-3 flex-1">
-                        <span className="text-gray-900 font-bold text-lg">3.</span>
-                        <h3 className="text-sm md:text-base lg:text-lg text-gray-900 font-bold">
-                          Max version 190KM four-wheel drive
-                        </h3>
-                      </div>
-                      <div className="text-base md:text-xl lg:text-2xl font-black text-white drop-shadow-lg whitespace-nowrap">
-                        $29,000!
-                      </div>
+                {/* Row 3 - Max 190KM */}
+                <div className="flex items-center justify-between gap-4 p-4 md:p-5 border-b border-[#0EA5FF]/30 hover:bg-[#0EA5FF]/10 transition-all duration-300">
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#0EA5FF] to-[#00E5FF] text-white text-sm font-bold rounded-full flex-shrink-0">
+                      3
                     </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl text-[#E6F6FF] font-bold">Max version 190KM</h3>
+                      <p className="text-[#BFC6CC] text-sm">four-wheel drive</p>
+                    </div>
+                  </div>
+                  <div className="text-2xl md:text-3xl font-black text-[#00E5FF]">
+                    $29,000
+                  </div>
+                </div>
 
-                    {/* Item 4 - Ultra */}
-                    <div className="flex items-center justify-between gap-4 p-3 md:p-4 bg-white/20 rounded-md backdrop-blur-sm">
-                      <div className="flex items-center gap-3 flex-1">
-                        <span className="text-gray-900 font-bold text-lg">4.</span>
-                        <h3 className="text-sm md:text-base lg:text-lg text-gray-900 font-bold">
-                          Ultra version 190KM four-wheel drive
-                        </h3>
-                      </div>
-                      <div className="text-base md:text-xl lg:text-2xl font-black text-white drop-shadow-lg whitespace-nowrap">
-                        $30,500!
-                      </div>
+                {/* Row 4 - Ultra 190KM */}
+                <div className="flex items-center justify-between gap-4 p-4 md:p-5 hover:bg-[#0EA5FF]/10 transition-all duration-300">
+                  <div className="flex items-center gap-3 flex-1">
+                    <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#0EA5FF] to-[#00E5FF] text-white text-sm font-bold rounded-full flex-shrink-0">
+                      4
                     </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl text-[#E6F6FF] font-bold">Ultra version 190KM</h3>
+                      <p className="text-[#BFC6CC] text-sm">four-wheel drive</p>
+                    </div>
+                  </div>
+                  <div className="text-2xl md:text-3xl font-black text-[#00E5FF]">
+                    $30,500
                   </div>
                 </div>
               </motion.div>
