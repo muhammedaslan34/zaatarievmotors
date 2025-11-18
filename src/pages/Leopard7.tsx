@@ -36,6 +36,16 @@ import snowHiddenGrayColor from '../assets/colors/Snow Hidden Gray.webp';
 import starMoonSilverColor from '../assets/colors/Star and Moon Silver.webp';
 import sunriseGoldColor from '../assets/colors/Sunrise Gold.webp';
 
+// Gallery images
+import gallery1 from '../assets/gallary/1.webp';
+import gallery2 from '../assets/gallary/2.webp';
+import gallery3 from '../assets/gallary/3.webp';
+import gallery4 from '../assets/gallary/4.webp';
+import gallery5 from '../assets/gallary/5.webp';
+import gallery6 from '../assets/gallary/6.webp';
+import gallery7 from '../assets/gallary/7.webp';
+import gallery8 from '../assets/gallary/8.webp';
+
 // Placeholder URL for remaining missing image
 const frontViewHeadlights = 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800';
 
@@ -78,6 +88,18 @@ const colors = [
   { name: 'Sunrise Gold', image: sunriseGoldColor },
 ];
 
+const galleryImages = [
+  { src: gallery1, title: 'Exterior Design', description: 'Bold and commanding presence' },
+  { src: gallery2, title: 'Interior Luxury', description: 'Premium materials and craftsmanship' },
+  { src: gallery3, title: 'Technology Hub', description: 'Advanced infotainment system' },
+  { src: gallery4, title: 'Seating Comfort', description: 'Spacious and ergonomic design' },
+  { src: gallery5, title: 'Lighting Details', description: 'Signature LED lighting elements' },
+  { src: gallery6, title: 'Performance View', description: 'Power meets efficiency' },
+  { src: gallery7, title: 'Cargo Space', description: 'Versatile storage solutions' },
+  { src: gallery8, title: 'Lifestyle Shot', description: 'Perfect for every adventure' },
+];
+
+
 export default function Models() {
   const [selectedColor, setSelectedColor] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -93,8 +115,46 @@ export default function Models() {
     }
   };
 
+  // Compare table data for parameter configuration section
+  const compareColumns = [
+    'Pro version Two-wheel drive',
+    'Max version Two-wheel drive',
+    'Max version Four-wheel drive',
+    'Ultra version Four-wheel drive',
+  ];
+
+  const compareRows = [
+    { label: 'Pure electric range', values: ['135KM', '200KM', '190KM', '190KM'] },
+    { label: '0–100 km/h acceleration', values: ['7.9s', '7.5s', '5.9s', '4.5s'] },
+    { label: 'Wheels', values: ['19-inch wheels', '19-inch wheels', '20-inch wheels', '20-inch wheels'] },
+    {
+      label: 'Suspension',
+      values: [
+        'Front double wishbone + rear five-link independent suspension',
+        'Front double wishbone + rear five-link independent suspension',
+        'Front double wishbone + rear five-link independent suspension',
+        '+ Suspension hardness adjustment',
+      ],
+    },
+    { label: 'Assisted driving', values: ['DiPilot 100', 'DiPilot 100', 'DiPilot 100', 'DiPilot 300'] },
+    { label: 'Smart cockpit', values: ['DiLink 100', 'DiLink 100', 'Advanced smart cockpit · DiLink 100', 'Intelligent Advanced Edition · DiLink 150'] },
+    { label: 'Audio system', values: ['14 speakers', '14 speakers', '—', '20 Speakers'] },
+    { label: 'Seats', values: ['Full leather soufflé seats', 'Full leather soufflé seats', 'Full leather soufflé seats', 'Full leather soufflé seats + seat back ecological interface'] },
+    { label: 'Seat ventilation/heating', values: ['All car seats are ventilated and heated', 'All car seats are ventilated and heated', 'All car seats are ventilated and heated', 'All car seats are ventilated and heated'] },
+    { label: 'Refrigerator', values: ['—', 'Smart heating and cooling refrigerator', 'Smart heating and cooling refrigerator', 'Smart heating and cooling refrigerator'] },
+    { label: 'Air purification', values: ['—', '—', '—', 'Active fragrance system + air purifier'] },
+  ];
+
+  const galleryLayouts = [
+    'md:col-span-2 lg:col-span-2 lg:row-span-2 h-[420px]',
+    'h-[260px]',
+    'md:row-span-2 h-[360px]',
+    'h-[280px]',
+    'h-[300px]',
+  ];
+
   return (
-    <div className="pt-20 pb-20 bg-[#0A0A0A] min-h-screen">
+    <div className="pt-20 pb-20 bg-[#0A0A0A] min-h-screen rounded-3xl overflow-hidden mx-4 sm:mx-6 lg:mx-8">
       {/* Hero Section */}
       <div className="relative h-[70vh] overflow-hidden">
         <Image
@@ -669,35 +729,7 @@ export default function Models() {
           </div>
         </motion.div>
 
-        {/* Variants Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20 relative"
-        >
-          {/* Subtle background accent */}
-          <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:-mx-8 bg-gradient-to-tl from-[#00E5FF]/3 to-transparent rounded-3xl pointer-events-none"></div>
-          <div className="relative z-10">
-          <h2 className="text-3xl md:text-4xl text-[#E6F6FF] text-center mb-12">Available Variants</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {variants.map((variant, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-[#0EA5FF]/10 to-[#00E5FF]/5 rounded-xl p-8 border border-[#0EA5FF]/30 hover:border-[#0EA5FF]/60 hover:from-[#0EA5FF]/15 hover:to-[#00E5FF]/8 transition-all duration-300">
-                <h3 className="text-2xl text-[#E6F6FF] mb-4">{variant.name}</h3>
-                <div className="text-4xl text-[#00E5FF] mb-8">{variant.price}</div>
-                <Link
-                  href="/book-test-drive"
-                  className="flex items-center justify-center space-x-2 w-full py-3 bg-[#007bff] text-white rounded-lg hover:shadow-lg hover:shadow-[#007bff]/50 transition-all duration-300"
-                >
-                  <span>Get Quote</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-          </div>
-        </motion.div>
+      
 
         {/* Limited Time Offer CTA */}
         <motion.div
@@ -729,7 +761,7 @@ export default function Models() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-6xl text-[#E6F6FF] mb-4 font-bold"
+                className="text-4xl md:text-6xl text-[#E6F6FF] mb-4 font-bold rounded-lg"
               >
                 LIMITED TIME OFFER!
               </motion.h2>
@@ -923,6 +955,7 @@ export default function Models() {
           </div>
         </motion.div>
 
+      
         {/* Model Versions Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -937,7 +970,10 @@ export default function Models() {
           </div>
 
           {/* Image with Pricing Card */}
-          <div className="relative w-full rounded-3xl overflow-hidden">
+          <div 
+            className="relative w-full overflow-hidden border-4 border-[#0EA5FF]" 
+            style={{ borderRadius: '32px' }}
+          >
             {/* Background Image */}
             <Image
               src={pricesImage}
@@ -947,10 +983,11 @@ export default function Models() {
               className="w-full h-auto"
               quality={95}
               priority
+              style={{ display: 'block', borderRadius: '28px' }}
             />
 
             {/* Pricing Card - Positioned Right Middle */}
-            <div className="absolute top-1/2 right-8 md:right-16 lg:right-24 -translate-y-1/2 w-[90%] max-w-md md:max-w-lg lg:max-w-xl">
+            <div className="absolute top-1/2 right-4 md:right-8 lg:right-12 -translate-y-1/2 w-[85%] sm:w-auto max-w-md md:max-w-lg">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -1021,7 +1058,167 @@ export default function Models() {
                     $30,500
                   </div>
                 </div>
+
+
               </motion.div>
+              
+            </div>
+
+          </div>
+          <div className="text-center text-base text-[#BFC6CC] mt-4 max-w-2xl mx-auto">
+                "The prices listed above are Freight On Board (FOB) Jebal Ali FZ, meaning shipment and customs fees are not included, and the final cost depends on the destination country."
+
+          </div>
+        </motion.div>
+
+        {/* Parameter Configuration - Compare Table */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 relative"
+        >
+        <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl text-[#E6F6FF] text-center font-bold mb-6">Parameter configuration:</h3>
+          </div>
+
+          <div className=" rounded-2xl overflow-hidden border border-[#0EA5FF]/30 bg-gradient-to-br from-[#0EA5FF]/10 to-[#00E5FF]/5 ">
+            <div className=" ">
+
+              <div className="overflow-x-auto">
+                <table className="min-w-[1000px] w-full text-left border-collapse">
+                  <thead>
+                    <tr>
+                      <th className="bg-[#0A0A0A]/80 text-[#E6F6FF] font-semibold px-4 py-3 ">
+                        Parameter
+                      </th>
+                      {compareColumns.map((col, idx) => (
+                        <th
+                          key={idx}
+                          className="bg-[#0A0A0A]/80 text-[#E6F6FF] font-semibold px-4 py-3 "
+                        >
+                          {col}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {compareRows.map((row, rIdx) => (
+                      <tr key={rIdx}>
+                        <th scope="row" className="bg-[#0A0A0A]/80 text-[#E6F6FF] font-medium px-4 py-3  align-top">
+                          {row.label}
+                        </th>
+                        {row.values.map((val, cIdx) => (
+                          <td
+                            key={cIdx}
+                            className="bg-[#0A0A0A]/70 text-[#BFC6CC] px-4 py-3  align-top"
+                          >
+                            {val}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Gallery Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-[#E6F6FF] font-bold mb-4">Gallery</h2>
+            <p className="text-[#BFC6CC]">Explore the BYD Leopard 7 from every angle</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery1}
+                alt="Gallery 1"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery2}
+                alt="Gallery 2"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery3}
+                alt="Gallery 3"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery4}
+                alt="Gallery 4"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery5}
+                alt="Gallery 5"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery6}
+                alt="Gallery 6"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery7}
+                alt="Gallery 7"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-[#0EA5FF]/30">
+              <Image
+                src={gallery8}
+                alt="Gallery 8"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                quality={90}
+              />
             </div>
           </div>
         </motion.div>
